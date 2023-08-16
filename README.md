@@ -6,11 +6,14 @@ I share here some heterogeneous collection of screenshots of drawings I did usin
 
 - [x] SVG Screenshots for higher resolution;
 - [ ] MWE for every file in this repository.
+
+![](latex.png)
  
-![](fuzzy-sets.png)
+![](fuzzy-variable.png)
 ![](neuron.png)
 ![](backprop.png)
+![](vae.png)
 ![](ml-workflow.png)
 ![](bias-variance.png)
-![](clustering.png)
+![](query-pt.png)
 
