@@ -1,0 +1,68 @@
+\usetikzlibrary{decorations.pathmorphing}
+\tikzstyle{invisible} = [outer sep=0,inner sep=0,minimum size=0]
+
+\definecolor{olivegreen}{rgb}{0,0.6,0}
+
+\begin{tikzpicture}
+%%% ENCODER
+\node [fill=olivegreen!80!orange,thick, minimum height=1cm, minimum width=2cm,
+      decorate, decoration={random steps,segment length=3pt,amplitude=1pt}] at (1,1) {Encoder};
+      
+\node[invisible] (e1) at (-0.5,-0.5) {};
+\node[invisible] (e2) at (-0.5,2.5) {};
+\node[invisible] (e3) at (2.5,1.5) {};
+\node[invisible] (e4) at (2.5,0.5) {};
+
+\draw[thick] (e1)--(e2)--(e3)--(e4)--(e1);
+
+%% DECODER
+\node [fill=orange!80!olivegreen,thick, minimum height=1cm, minimum width=2cm,
+      decorate, decoration={random steps,segment length=3pt,amplitude=1pt}] at (5.5,1) {Decoder}; 
+    
+\node[invisible] (d1) at (4,0.5) {};
+\node[invisible] (d2) at (4,1.5) {};
+\node[invisible] (d3) at (7,2.5) {};
+\node[invisible] (d4) at (7,-0.5) {};
+
+\filldraw[thick] (d1)--(d2)--(d3)--(d4)--(d1);
+
+ %% LATENT SPACE
+\node (z1) at (3.25,0) {};
+\node (z2) at (3.25,2) {};
+\draw[ultra thick](z1)--(z2);
+
+%% INPUT
+\node (i1) at (-1,-.5) {};
+\node (i2) at (-1,2.5) {};
+\draw[ultra thick](i1)--(i2);
+\draw[thick,-latex] (-2,1)node[left]{$x$} -- (-1.25,1);
+
+%% OUTPUT
+\node (i1) at (7.5,-.5) {};
+\node (i2) at (7.5,2.5) {};
+\draw[ultra thick](i1)--(i2);
+\draw[thick,-latex] (7.75,1) -- (8.5,1)node[right]{$\hat{x}$};
+
+\node[cyan!50!black,left] at (3.3,3.7) {\begin{tabular}{p{4cm}}Expected negative log likelihood term wrt to encoder distribution\end{tabular}};
+\node[purple!50!black,right] at (3.15,3.7) {\begin{tabular}{p{4cm}}\textbf{\underline{Kullback-Leiber}} divergence term where $p(\textbf{z})\,\sim\,\mathcal{N}\left(\mu=0,\,\sigma^2=1\right)$\end{tabular}};
+
+\node at (-1.34,5) {$\mathcal{J}\;=\;-\ $};
+\node at (3.25,5) {$+$};
+\node[fill=cyan!50,draw,thick, minimum height=1cm, minimum width=2cm,
+      decorate, decoration={random steps,segment length=3pt,amplitude=1pt},left] at (3.05,5) {$\mathfrak{E}_{\textbf{z}\sim q\left(\textbf{z}|x^{(i)};\ W\right)}\left[\log p\left(\hat{x}^{(i)}|\textbf{z};\ W\right)\right]$}; 
+\node[fill=purple!50,draw,thick, minimum height=1cm, minimum width=2cm,
+      decorate, decoration={random steps,segment length=3pt,amplitude=1pt},right] at (3.45,5) {$\mathcal{KL}\left(q\left(\textbf{z}|x^{(i)};\ W\right)\|\ p(\textbf{z})\right)$}; 
+
+\node[fill=olivegreen!80!orange,draw] at (1,2.75) {$q\left(\textbf{z}|x;\ W\right)$};
+\node[fill=orange!80!olivegreen,draw] at (5.5,2.75) {$p\left(\hat{x}|\textbf{z};\ W\right)$};
+
+\node[fill=black!30] at (3.25,2.15) {$\textbf{z}$};
+\node[fill=yellow!30] at (3.25,-.5) {Gaussian probability density};
+
+%\node [fill=yellow!50,draw,thick, minimum height=1cm, minimum width=2cm,
+%      decorate, decoration={random steps,segment length=3pt,amplitude=1pt}] at (3.25,5) {$\mathcal{J}\;=\;-\mathcal{E}_{z\sim q_{w}\left(z|x^{(i)}\right)}\left[\log p_w\left(x^{(i)}|z\right)\right]+\mathcal{KL}\left(q_w\left(z|x^{(i)}\right)\|p(z)\right)$}; 
+
+%\draw[thick,->,out=270,in=90](3.25,4.35)to(-2.15,1.5); 
+%\draw[thick,->,out=270,in=90](3.25,4.35)to(8.65,1.5);
+     
+\end{tikzpicture}

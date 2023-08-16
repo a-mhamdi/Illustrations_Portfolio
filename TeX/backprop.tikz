@@ -1,0 +1,182 @@
+\usetikzlibrary{decorations.pathmorphing}
+\begin{tikzpicture}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\node[red!80!black] (x1) at (0,0)  {$x_1$};
+\node[red!70!black] (x2) at (0,-1) {$x_2$};
+\node[red!60!black] (x3) at (0,-2) {$x_3$};
+\node[red!50!black] (x4) at (0,-3) {$x_4$};
+
+\draw[red!80!black] (x1) ellipse (0.35 and 0.35);
+\draw[red!70!black] (x2) ellipse (0.35 and 0.35);
+\draw[red!60!black] (x3) ellipse (0.35 and 0.35);
+\draw[red!50!black] (x4) ellipse (0.35 and 0.35);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\node[blue!80!black] (h11) at (3,1)  {$\Sigma~|~f_1$};
+\node[blue!70!black] (h21) at (3,0)  {$\Sigma~|~f_1$};
+\node[blue!60!black] (h31) at (3,-1) {$\Sigma~|~f_1$};
+\node[blue!50!black] (h41) at (3,-2) {$\Sigma~|~f_1$};
+\node[blue!40!black] (h51) at (3,-3) {$\Sigma~|~f_1$};
+\node[blue!30!black] (h61) at (3,-4) {$\Sigma~|~f_1$};
+
+\draw[blue!80!black] (h11) ellipse (0.35 and 0.35);
+\draw[blue!70!black] (h21) ellipse (0.35 and 0.35);
+\draw[blue!60!black] (h31) ellipse (0.35 and 0.35);
+\draw[blue!50!black] (h41) ellipse (0.35 and 0.35);
+\draw[blue!40!black] (h51) ellipse (0.35 and 0.35);
+\draw[blue!30!black] (h61) ellipse (0.35 and 0.35);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\node[green!80!black] (h12) at (6,1)  {$\Sigma~|~f_2$};
+\node[green!70!black] (h22) at (6,0)  {$\Sigma~|~f_2$};
+\node[green!60!black] (h32) at (6,-1) {$\Sigma~|~f_2$};
+\node[green!50!black] (h42) at (6,-2) {$\Sigma~|~f_2$};
+\node[green!40!black] (h52) at (6,-3) {$\Sigma~|~f_2$};
+\node[green!30!black] (h62) at (6,-4) {$\Sigma~|~f_2$};
+
+\draw[green!80!black] (h12) ellipse (0.35 and 0.35);
+\draw[green!70!black] (h22) ellipse (0.35 and 0.35);
+\draw[green!60!black] (h32) ellipse (0.35 and 0.35);
+\draw[green!50!black] (h42) ellipse (0.35 and 0.35);
+\draw[green!40!black] (h52) ellipse (0.35 and 0.35);
+\draw[green!30!black] (h62) ellipse (0.35 and 0.35);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\node[orange!80!black] (y1) at (9,-.5)  {$\Sigma~|~f_3$}; \draw[orange!80!black,-latex](y1) to node [above] {$\hat{y}_1$} node [below,black] {$y_1$} ++(1,0);
+\node[orange!60!black] (y2) at (9,-1.5) {$\Sigma~|~f_3$}; \draw[orange!60!black,-latex](y2) to node [above] {$\hat{y}_2$} node [below,black] {$y_2$} ++(1,0);
+\node[orange!40!black] (y3) at (9,-2.5) {$\Sigma~|~f_3$}; \draw[orange!40!black,-latex](y3) to node [above] {$\hat{y}_3$} node [below,black] {$y_3$} ++(1,0);
+
+\draw[orange!80!black] (y1) ellipse (0.35 and 0.35);
+\draw[orange!60!black] (y2) ellipse (0.35 and 0.35);
+\draw[orange!40!black] (y3) ellipse (0.35 and 0.35);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\draw[red!80!black,-latex]  (x1)++(0.35,0) to [out=0,in=180] node[above] {$w_{1, 1}^{[1]}$} (h11);
+\draw[red!80!black,-latex]  (x1)++(0.35,0) to [out=0,in=180] (h21);
+\draw[red!80!black,-latex]  (x1)++(0.35,0) to [out=0,in=180] (h31) ;
+\draw[red!80!black,-latex]  (x1)++(0.35,0) to [out=0,in=180] (h41);
+\draw[red!80!black,-latex]  (x1)++(0.35,0) to [out=0,in=180] (h51) ;
+\draw[red!80!black,-latex]  (x1)++(0.35,0) to [out=0,in=180] (h61) ;
+
+\draw[red!70!black,-latex]  (x2)++(0.35,0) to [out=0,in=185] (h11) ;
+\draw[red!70!black,-latex]  (x2)++(0.35,0) to [out=0,in=185] (h21) ;
+\draw[red!70!black,-latex]  (x2)++(0.35,0) to [out=0,in=185] (h31) ;
+\draw[red!70!black,-latex]  (x2)++(0.35,0) to [out=0,in=185] (h41) ;
+\draw[red!70!black,-latex]  (x2)++(0.35,0) to [out=0,in=185] (h51) ;
+\draw[red!70!black,-latex]  (x2)++(0.35,0) to [out=0,in=185] (h61) ;
+
+\draw[red!60!black,-latex]  (x3)++(0.35,0) to [out=0,in=190] (h11) ;
+\draw[red!60!black,-latex]  (x3)++(0.35,0) to [out=0,in=190] (h21) ;
+\draw[red!60!black,-latex]  (x3)++(0.35,0) to [out=0,in=190] (h31) ;
+\draw[red!60!black,-latex]  (x3)++(0.35,0) to [out=0,in=190] (h41) ;
+\draw[red!60!black,-latex]  (x3)++(0.35,0) to [out=0,in=190] (h51) ;
+\draw[red!60!black,-latex]  (x3)++(0.35,0) to [out=0,in=190] (h61) ;
+
+\draw[red!50!black,-latex]  (x4)++(0.35,0) to [out=0,in=195] (h11) ;
+\draw[red!50!black,-latex]  (x4)++(0.35,0) to [out=0,in=195] (h21) ;
+\draw[red!50!black,-latex]  (x4)++(0.35,0) to [out=0,in=195] (h31) ;
+\draw[red!50!black,-latex]  (x4)++(0.35,0) to [out=0,in=195] (h41) ;
+\draw[red!50!black,-latex]  (x4)++(0.35,0) to [out=0,in=195] (h51) ;
+\draw[red!50!black,-latex]  (x4)++(0.35,0) to [out=0,in=195] node[below] {$w_{6, 4}^{[1]}$} (h61) ;
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\draw[blue!90!black,-latex]  (h11)++(0.35,0) to [out=0,in=180] node[above] {$w_{1, 1}^{[2]}$} (h12) ;
+\draw[blue!90!black,-latex]  (h11)++(0.35,0) to [out=0,in=180] (h22) ;
+\draw[blue!90!black,-latex]  (h11)++(0.35,0) to [out=0,in=180] (h32) ;
+\draw[blue!90!black,-latex]  (h11)++(0.35,0) to [out=0,in=180] (h42) ;
+\draw[blue!90!black,-latex]  (h11)++(0.35,0) to [out=0,in=180] (h52) ;
+\draw[blue!90!black,-latex]  (h11)++(0.35,0) to [out=0,in=180] (h62) ;
+
+\draw[blue!80!black,-latex]  (h21)++(0.35,0) to [out=0,in=185] (h12) ;
+\draw[blue!80!black,-latex]  (h21)++(0.35,0) to [out=0,in=185] (h22) ;
+\draw[blue!80!black,-latex]  (h21)++(0.35,0) to [out=0,in=185] (h32) ;
+\draw[blue!80!black,-latex]  (h21)++(0.35,0) to [out=0,in=185] (h42) ;
+\draw[blue!80!black,-latex]  (h21)++(0.35,0) to [out=0,in=185] (h52) ;
+\draw[blue!80!black,-latex]  (h21)++(0.35,0) to [out=0,in=185] (h62) ;
+
+\draw[blue!70!black,-latex]  (h31)++(0.35,0) to [out=0,in=190] (h12) ;
+\draw[blue!70!black,-latex]  (h31)++(0.35,0) to [out=0,in=190] (h22) ;
+\draw[blue!70!black,-latex]  (h31)++(0.35,0) to [out=0,in=190] (h32) ;
+\draw[blue!70!black,-latex]  (h31)++(0.35,0) to [out=0,in=190] (h42) ;
+\draw[blue!70!black,-latex]  (h31)++(0.35,0) to [out=0,in=190] (h52) ;
+\draw[blue!70!black,-latex]  (h31)++(0.35,0) to [out=0,in=190] (h62) ;
+
+\draw[blue!60!black,-latex]  (h41)++(0.35,0) to [out=0,in=195] (h12) ;
+\draw[blue!60!black,-latex]  (h41)++(0.35,0) to [out=0,in=195] (h22) ;
+\draw[blue!60!black,-latex]  (h41)++(0.35,0) to [out=0,in=195] (h32) ;
+\draw[blue!60!black,-latex]  (h41)++(0.35,0) to [out=0,in=195] (h42) ;
+\draw[blue!60!black,-latex]  (h41)++(0.35,0) to [out=0,in=195] (h52) ;
+\draw[blue!60!black,-latex]  (h41)++(0.35,0) to [out=0,in=195] (h62) ;
+
+\draw[blue!50!black,-latex]  (h51)++(0.35,0) to [out=0,in=200] (h12) ;
+\draw[blue!50!black,-latex]  (h51)++(0.35,0) to [out=0,in=200] (h22) ;
+\draw[blue!50!black,-latex]  (h51)++(0.35,0) to [out=0,in=200] (h32) ;
+\draw[blue!50!black,-latex]  (h51)++(0.35,0) to [out=0,in=200] (h42) ;
+\draw[blue!50!black,-latex]  (h51)++(0.35,0) to [out=0,in=200] (h52) ;
+\draw[blue!50!black,-latex]  (h51)++(0.35,0) to [out=0,in=200] (h62) ;
+
+\draw[blue!40!black,-latex]  (h61)++(0.35,0) to [out=0,in=205] (h12) ;
+\draw[blue!40!black,-latex]  (h61)++(0.35,0) to [out=0,in=205] (h22) ;
+\draw[blue!40!black,-latex]  (h61)++(0.35,0) to [out=0,in=205] (h32) ;
+\draw[blue!40!black,-latex]  (h61)++(0.35,0) to [out=0,in=205] (h42) ;
+\draw[blue!40!black,-latex]  (h61)++(0.35,0) to [out=0,in=205] (h52) ;
+\draw[blue!40!black,-latex]  (h61)++(0.35,0) to [out=0,in=205] node[below] {$w_{6, 6}^{[2]}$} (h62) ;
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\draw[green!90!black,-latex]  (h12)++(0.35,0) to [out=0,in=170] node[above] {$w_{1, 1}^{[3]}$} (y1) ;
+\draw[green!80!black,-latex]  (h22)++(0.35,0) to [out=0,in=175] (y1) ;
+\draw[green!70!black,-latex]  (h32)++(0.35,0) to [out=0,in=180] (y1) ;
+\draw[green!60!black,-latex]  (h42)++(0.35,0) to [out=0,in=185] (y1) ;
+\draw[green!50!black,-latex]  (h52)++(0.35,0) to [out=0,in=190] (y1) ;
+\draw[green!40!black,-latex]  (h62)++(0.35,0) to [out=0,in=195] (y1) ;
+
+\draw[green!90!black,-latex]  (h12)++(0.35,0) to [out=0,in=170] (y2) ;
+\draw[green!80!black,-latex]  (h22)++(0.35,0) to [out=0,in=175] (y2) ;
+\draw[green!70!black,-latex]  (h32)++(0.35,0) to [out=0,in=180] (y2) ;
+\draw[green!60!black,-latex]  (h42)++(0.35,0) to [out=0,in=185] (y2) ;
+\draw[green!50!black,-latex]  (h52)++(0.35,0) to [out=0,in=190] (y2) ;
+\draw[green!40!black,-latex]  (h62)++(0.35,0) to [out=0,in=195] (y2) ;
+
+\draw[green!90!black,-latex]  (h12)++(0.35,0) to [out=0,in=170] (y3) ;
+\draw[green!80!black,-latex]  (h22)++(0.35,0) to [out=0,in=175] (y3) ;
+\draw[green!70!black,-latex]  (h32)++(0.35,0) to [out=0,in=180] (y3) ;
+\draw[green!60!black,-latex]  (h42)++(0.35,0) to [out=0,in=185] (y3) ;
+\draw[green!50!black,-latex]  (h52)++(0.35,0) to [out=0,in=190] (y3) ;
+\draw[green!40!black,-latex]  (h62)++(0.35,0) to [out=0,in=195] node[below] {$w_{3, 6}^{[3]}$} (y3) ;
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\node[blue!90!black] at (2.7,1.5) {$a_1^{[1]}$};
+\node[blue!90!black] at (3.5,1.5) {$h_1^{[1]}$};
+\node[blue!40!black] at (2.5,-4.5) {$a_6^{[1]}$};
+\node[blue!40!black] at (3.5,-4.5) {$h_6^{[1]}$};
+
+\node[green!90!black] at (5.7,1.5) {$a_1^{[2]}$};
+\node[green!90!black] at (6.5,1.5) {$h_1^{[2]}$};
+\node[green!40!black] at (5.5,-4.5) {$a_6^{[2]}$};
+\node[green!40!black] at (6.5,-4.5) {$h_6^{[2]}$};
+
+\node[orange!80!black] at (8.7,0) {$a_1^{[3]}$};
+\node[orange!80!black] at (9.5,0) {$h_1^{[3]}$};
+\node[orange!40!black] at (8.6,-3) {$a_3^{[3]}$};
+\node[orange!40!black] at (9.35,-3) {$h_3^{[3]}$};
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\draw[rounded corners=3pt,dashed,orange] (8,0.25) rectangle (10,-3.5); \node[below,fill=orange] at(9,-3.75) {\color{white}{$l$}};
+\draw[rounded corners=3pt,dashed,green] (5,1.75) rectangle (7,-5); \node[below,fill=green] at(7.4,-4.35) {\color{white}{$k$}};
+\draw[rounded corners=3pt,dashed,blue] (2,1.75) rectangle (4,-5); \node[below,fill=blue] at(1.6,-4.35) {\color{white}{$j$}};
+\draw[rounded corners=3pt,dashed,red] (-0.5,0.5) rectangle (0.5,-3.5); \node[below,fill=red] at(0,-3.75) {\color{white}{$i$}};
+
+\node [rotate=0,fill=yellow!50,draw,thick, minimum height=1cm, minimum width=2cm, decorate, decoration={random steps,segment length=3pt,amplitude=1pt}] at (9.35,1.25) {\scshape{Backpropagation}};
+
+\end{tikzpicture}

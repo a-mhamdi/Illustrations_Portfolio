@@ -1,0 +1,43 @@
+\tikzset{basic/.style={draw,fill=blue!20,text width=1.5em,text badly centered}}
+\tikzset{input/.style={basic,circle}}
+\tikzset{weights/.style={basic,rectangle, rounded corners=2pt}}
+\tikzset{functions/.style={basic,circle,fill=blue!10}}
+
+
+\begin{tikzpicture}[>=latex]
+		\begin{scope}
+        \node[functions] (center) {};
+        %\node[below of=center,font=\normalsize,text width=5em] {};
+
+        \draw[thick] (0.5em,0.5em) -- (0,0.5em) -- (0,-0.5em) -- (-0.5em,-0.5em);
+        \draw (0em,0.75em) -- (0em,-0.75em);
+        \draw (0.75em,0em) -- (-0.75em,0em);
+        \node[right of=center] (right) {};
+        \path[draw,->] (center) -- (right);
+        \node[functions,left=3em of center] (left) {$\sum$};
+        \path[draw,->] (left) -- (center);
+        \node[weights,left=3em of left] (2) {$2.5$} -- (2) node[input,left of=2] (l2) {$0.7$};
+        \path[draw,->] (l2) -- (2);
+        \path[draw,->] (2) to [out=0,in=180] (left);
+        \node[weights,below of=2] (4) {$0.15$} -- (4) node[input,left of=4] (l4) {$-2$};
+        \path[draw,->] (l4) -- (4);
+        \path[draw,->] (4) to [out=0,in=225] (left);
+        \node[weights,below of=4] (3) {$1.3$} -- (3) node[input,left of=3] (l3) {$0.8$};
+        \path[draw,->] (l3) -- (3);
+        \path[draw,->] (3) to [out=0,in=270] (left);
+        \node[weights,above of=2] (1) {$0.7$} -- (1) node[input,left of=1] (l1) {$2.6$};
+        \path[draw,->] (l1) -- (1);
+        \path[draw,->] (1) to [out=0,in=135] (left);
+        \node[weights,above of=1] (0) {$-1$} -- (0) node[input,left of=0] (l0) {$1$};
+        \path[draw,->] (l0) -- (0);
+        \path[draw,->] (0) to [out=0,in=90] (left);
+        \end{scope}
+
+        \begin{scope}[scale=0.5,xshift=4cm,yshift=-2cm]
+        	\draw[very thin,color=black] (-0,-0) grid (4,4);
+        	\draw[->] (-0.2,2) -- (4.3,2) node[right] {$x$};
+			\draw[->] (2,-.2) -- (2,4.35) node[above] {$y$};
+
+			\draw[blue,thick] (0,0) --(2,0)--(2,4)--(4,4);
+        \end{scope}
+\end{tikzpicture}

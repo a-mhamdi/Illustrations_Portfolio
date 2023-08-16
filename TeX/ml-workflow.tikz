@@ -1,0 +1,73 @@
+\begin{tikzpicture}[x=.8cm,y=.8cm]
+
+	\node (n0) at (-6,7) {Generate or gather data};
+	\node (n1) at (-1.5594,7.0025) {Clean data};
+	\node (n2) at (-1.3646,4.9895) {Select algorithm};
+	\node (n3) at (-6,5) {Split data};
+	\node [left] (n31) at (-8,2.8) {Test set};
+	\node (n32) at (-6.021,2.7914) {Training set};
+	\node [right] (n33) at (-4.5,2.8) {Validation set};
+	\node (n4) at (-6,1) {Preprocess data};
+	\node (n5) at (-1.2,0.4) {Train algorithm};
+	\node (n6) at (-6,-0.8) {Build model};
+	\node (n7) at (-10.2713,-0.6282) {Deploy};
+	
+	\draw[thick,rounded corners=2pt]($(n0)+(-2,-.75)$)rectangle($(n0)+(2,.75)$);
+	\draw[thick,rounded corners=2pt]($(n1)+(-1.5,-.75)$)rectangle($(n1)+(1.5,.75)$);
+	\draw[thick,rounded corners=2pt]($(n2)+(-1.75,-.75)$)rectangle($(n2)+(1.75,.75)$);
+	\draw[thick,rounded corners=2pt]($(n3)+(-1.5,-.75)$)rectangle($(n3)+(1.5,.75)$);
+	
+	\draw[thick,rounded corners=2pt,fill opacity=.5,fill=red!80!black]($(n31)+(-1.25,-.5)$)rectangle($(n31)+(1.25,.5)$);
+	\draw[thick,rounded corners=2pt,fill opacity=.5,fill=green!80!black]($(n32)+(-1.25,-.5)$)rectangle($(n32)+(1.25,.5)$);
+	\draw[thick,rounded corners=2pt,fill opacity=.5,fill=blue!80!black]($(n33)+(-1.25,-.5)$)rectangle($(n33)+(1.25,.5)$);
+	
+	\draw[thick,rounded corners=2pt]($(n4)+(-2,-.75)$)rectangle($(n4)+(2,.75)$);
+	\draw[thick,rounded corners=2pt]($(n5)+(-2,-.75)$)rectangle($(n5)+(2,.75)$);
+	\draw[thick,rounded corners=2pt]($(n6)+(-1.5,-.75)$)rectangle($(n6)+(1.5,.75)$);
+	\draw[thick,rounded corners=2pt,fill opacity=.5,fill=yellow!90!black]($(n7)+(-1.5,-.75)$)rectangle($(n7)+(1.5,.75)$);
+	
+	%\draw[-latex]($(n0)-(0,.75)$)to($(n1)+(0,.75)$);
+	%\draw[-latex]($(n1)-(0,.75)$)to($(n2)+(0,.75)$);
+	%\draw[-latex]($(n2)-(0,.75)$)to($(n3)+(0,.75)$);
+	%\draw[-latex]($(n3)-(0,.75)$)to($(n32)+(0,.5)$);
+	%\draw[-latex]($(n32)-(0,.5)$)to($(n4)+(0,.75)$);
+	%\draw[-latex]($(n4)-(0,.75)$)to($(n5)+(0,.75)$);
+	%\draw[-latex]($(n5)-(0,.75)$)to($(n6)+(0,.75)$);
+	%\draw[-latex]($(n6)-(0,.75)$)to($(n7)+(0,.75)$);
+	
+	\node (a0) at (-4.1,7) {}; \node (a1) at (-2.9,7) {}; 
+	\node (a2) at (-1.5,6.3645) {}; \node (a3) at (-1.5,5.583) {}; \node (a31) at (-3.5,3.2) {}; \node (a32) at (-6,3.2) {}; \node (a33) at (-8.7,3.2) {};
+	\node (a4) at (-5.473,1.6089) {}; \node (a5) at (-8.8848,-0.5799) {};
+	\node (a6) at (-7.3868,-0.8563) {}; \node (a7) at (-4.648,-0.7933) {};
+	\node (a8) at (-3.0644,0.2128) {}; \node (a9) at (-4.1262,1.0485) {};
+	\node (a10) at (-2.9971,4.9896) {}; \node (a11) at (-3.0738,0.4097) {};
+	\node (a12) at (-4.6325,4.987) {}; \node (a13) at (-6,4.3) {};
+	\node (a14) at (-6,2.4) {}; \node (a15) at (-3.4794,2.4304) {}; \node (a16) at (-6,1.6) {};
+	
+	\draw[-latex,thick](a0)to(a1);
+	\draw[-latex,thick](a2)to(a3);
+	\draw[-latex,out=180,in=0,thick](a6)to(a5);
+	\draw[-latex,out=0,in=180,thick](a9)to(a11);
+	\draw[-latex,out=180,in=0,thick](a8)to(a7);
+	\draw[-latex,thick](a10)to(a12);
+	\draw[-latex,thick](a13)to(a32);
+	\draw[-latex,in=90,out=-90,thick](a13)to(a31);
+	\draw[-latex,in=90,out=-90,thick](a13)to(a33);
+	\draw[-latex,in=90,out=270,thick](a14)to(a16);
+	\draw[-latex,in=90,out=270,thick](a15)to(a4);
+	
+	\node (b1) at (-8.7376,2.4439) {}; 
+	\node[left,color=blue!50!green] at ($(b1)-(0.25,1)$){\footnotesize\it (Model evaluation)};
+	\node (b2) at (-7.3643,-0.397) {};
+	\draw[-latex,out=180,in=270,color=blue!50!green,thick](b2)to(b1);
+	
+	\node[below] (b0) at (-6,0.9) {\footnotesize\it (Feature selection, scaling, ...)};
+	
+	\node (b7) at (-2.7682,2.4147) {};
+	\node (b8) at (-2.4158,1.043) {};
+	
+	\node[color=red!50!blue] (b91) at (-1.008,2.2225) {\footnotesize{\bfseries Refine model}};
+	\node[color=red!50!blue] (b92) at (-0.608,1.7225) {\footnotesize{\it(Hyperparameters tuning, ...)}};
+	\draw[-latex,out=90,in=270,color=red!50!blue,thick](b8)to(b7);
+	%\node (b0) at (0.5,0) {};
+\end{tikzpicture}

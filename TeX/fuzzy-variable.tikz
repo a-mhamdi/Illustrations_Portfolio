@@ -1,0 +1,44 @@
+\usetikzlibrary{decorations.pathmorphing}
+\begin{tikzpicture}[scale=.7]      
+\node [draw,fill=yellow,thick, minimum height=1cm, minimum width=2cm,
+      decorate, decoration={random steps,segment length=3pt,amplitude=1pt}] at (7, 3.25)
+      {Linguistic Values};
+
+\node at (7,2) {{\it(States)}};
+
+\draw[-latex,in=90, out=180] (6.25,2) to (1,1);
+\draw[-latex,in=90, out=180] (6.25,2) to (4,1);
+
+\draw[-latex,in=90, out=270] (7,1.75) to (7,1);
+
+\draw[-latex,in=90, out=0] (7.75,2) to (10,1);
+\draw[-latex,in=90, out=0] (7.75,2) to (13,1);
+     
+\node [fill=red!50,draw,thick, minimum height=1cm, minimum width=2cm,
+      rounded corners=2pt] at (1, 0) {Very small};
+
+\node [fill=green!50,draw,thick, minimum height=1cm, minimum width=2cm,
+      rounded corners=2pt] at (4, 0) {Small};
+      
+\node [fill=blue!50,draw,thick, minimum height=1cm, minimum width=2cm,
+      rounded corners=2pt] at (7, 0) {Medium};
+      
+\node [fill=magenta!50,draw,thick, minimum height=1cm, minimum width=2cm,
+      rounded corners=2pt] at (10, 0) {Large};
+
+\node [fill=orange!50,draw,thick, minimum height=1cm, minimum width=2cm,
+      rounded corners=2pt] at (13, 0) {Very large};
+      
+
+\draw[very thin,color=gray] (-0.25, -5.1) grid (14.25, -1);
+\draw[->] (-0.2,-5) -- (14.2,-5); \node[below] at (7, -5.2) {Base variable};
+\draw[->] (0, -5) -- (0,-.9); \node[right,rotate=90] at (-0.5, -5.45) {Membership degree};
+
+\draw[red!50,ultra thick](0,-1)--(2,-1)--(4,-5);
+\draw[green!50,ultra thick](1,-5)--(3,-1)--(5,-1)--(7,-5);
+\draw[blue!50,ultra thick](4,-5)--(6,-1)--(8,-1)--(10,-5);
+\draw[magenta!50,ultra thick](7,-5)--(9,-1)--(11,-1)--(13,-5);
+\draw[orange!50,ultra thick](10,-5)--(12,-1)--(14,-1);
+
+\end{tikzpicture}
+    

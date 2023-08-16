@@ -1,0 +1,72 @@
+
+
+\begin{tikzpicture}
+\begin{scope}
+\draw[very thin,color=gray,step=.3] (0,-0.9) grid (2.7,1.8);
+
+\draw[->] (-0.2,0) -- (2.7,0) node[right] {$x_1$};
+\draw[->] (0,-0.9) -- (0,1.8) node[above] {$x_2$};
+
+\filldraw[green!70!blue] (0.3,0.9) circle (2pt);
+\filldraw[green!70!blue] (0,.5) circle (2pt);
+\filldraw[green!70!blue] (1,0.5) circle (2pt);
+\filldraw[green!70!blue] (0.6,0.6) circle (2pt);
+\filldraw[green!70!blue] (.5,0) circle (2pt);
+\filldraw[green!70!blue] (0.9,0) circle (2pt);
+\filldraw[green!70!blue] (0,-0.5) circle (2pt);
+\filldraw[green!70!blue] (0.5,-0.5) circle (2pt);
+\filldraw[green!70!blue] (0.6,1.2) circle (2pt);
+\filldraw[green!70!blue] (0,0) circle (2pt);
+
+\filldraw[blue!70!green] (2.1,0.9) rectangle ++(4pt,4pt);
+\filldraw[blue!70!green] (1.5,1.5) rectangle ++(4pt,4pt);
+\filldraw[blue!70!green] (2.4,0.6) rectangle ++(4pt,4pt);
+\filldraw[blue!70!green] (1.5,0.6) rectangle ++(4.0001pt,4.0001pt);
+\filldraw[blue!70!green] (1.9094,1.3094) rectangle ++(4.0001pt,4.0001pt);
+\filldraw[blue!70!green] (2.1,-0.3) rectangle ++(4pt,4pt);
+\filldraw[blue!70!green] (1.9,0.3) rectangle ++(4pt,4pt);
+
+\node (star) at (1.2,1.2) {\color{red}$\star$};
+\node (qpt) at (1.8,2.1) {\color{red} Query point};
+\draw[-latex,out=180,color=red] (qpt) to (star);
+
+\draw[thick,dashed,orange](.65,1.76)--(1.8,-.8);
+
+\end{scope}
+
+	\begin{scope}[xshift=5cm]
+\draw[very thin,color=gray,step=.3] (0,-0.9) grid (2.7,1.8);
+
+\draw[->] (-0.2,0) -- (2.7,0) node[below] {$x^T\theta$};
+\draw[->] (0,-0.9) -- (0,1.8) node[above] {$y$};
+
+\node at (-.25,1.7) {$1$};
+\node at (-.25,0) {$0$};
+
+\filldraw[green!70!blue] (0.0,0.1) circle (2pt);
+\filldraw[green!70!blue] (0.8,.2) circle (2pt);
+\filldraw[green!70!blue] (.7,0.13) circle (2pt);
+\filldraw[green!70!blue] (.1,.12) circle (2pt);
+\filldraw[green!70!blue] (1,.1) circle (2pt);
+\filldraw[green!70!blue] (.9,0) circle (2pt);
+\filldraw[green!70!blue] (.8,0.15) circle (2pt);
+\filldraw[green!70!blue] (.5,0.15) circle (2pt);
+\filldraw[green!70!blue] (.4,.2) circle (2pt);
+\filldraw[green!70!blue] (0,0) circle (2pt);
+
+\filldraw[blue!70!green] (2.0,1.6) rectangle ++(4pt,4pt);
+\filldraw[blue!70!green] (1.5,1.7) rectangle ++(4pt,4pt);
+\filldraw[blue!70!green] (2.4,1.6) rectangle ++(4pt,4pt);
+\filldraw[blue!70!green] (1.6,1.6) rectangle ++(4.0001pt,4.0001pt);
+\filldraw[blue!70!green] (1.7,1.6) rectangle ++(4.0001pt,4.0001pt);
+\filldraw[blue!70!green] (2.2,1.7) rectangle ++(4pt,4pt);
+\filldraw[blue!70!green] (1.9,1.7) rectangle ++(4pt,4pt);
+
+\draw[thick,dashed,orange](.15,1)--(2.675,1);
+\node (star) at (1.9,1.55) {\color{red}$\star$};
+
+\end{scope}
+
+
+
+\end{tikzpicture}
