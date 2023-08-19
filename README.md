@@ -16,4 +16,8 @@ I share here some heterogeneous collection of screenshots of drawings I did usin
 ![](ml-workflow.png)
 ![](bias-variance.png)
 ![](query-pt.png)
+![](mu.png)
+![](loi-normale.png)
+![](sf-1.png)
+![](sf-2.png)
 
